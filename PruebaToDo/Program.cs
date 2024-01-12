@@ -1,5 +1,5 @@
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
+// Program.cs
+
 using PruebaToDo.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
+
+// Agrega HttpClient al contenedor de servicios
+builder.Services.AddHttpClient();
 
 var app = builder.Build();
 
